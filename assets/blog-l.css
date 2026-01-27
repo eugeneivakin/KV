@@ -1,0 +1,111 @@
+.template-blog .header-banner .page-head {
+    padding: 40px 0 0;
+}
+
+
+
+
+
+.template-article .header-banner {
+    padding: 30px 0 50px;
+}
+.t4s-page-heading-article time.t4s-entry-date {
+    color: #000;
+}
+.t4s-page-heading-article .t4s-article-heading-category.t4s-fnt-fm-2 {
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 0 10px;
+  text-align: left;
+  display: flex;
+  position: relative;
+  padding-left: 15px;
+}
+.t4s-page-heading-article .t4s-article-heading-category.t4s-fnt-fm-2 a {
+  color: #000;
+}
+.t4s-article-heading-category.t4s-fnt-fm-2.t4s-font-italic-false:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+  transform: rotate(-45deg);
+  transform-origin: 100% 0%;
+}
+
+.t4s-article-heading-category.t4s-fnt-fm-2.t4s-font-italic-false:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 16px;
+  left: 1px;
+  width: 8px;
+  height: 1px;
+  background-color: #000;
+  transform: rotate(45deg);
+  transform-origin: 100% 0%;
+}
+.t4s-article-content.t4s-rte h2, .t4s-article-content.t4s-rte h3, .t4s-article-content.t4s-rte h4 {
+    margin: 15px 0 10px;
+}
+.t4s-article-content.t4s-rte p {
+    margin-bottom: 10px;
+}
+.t4s-article-content.t4s-rte table {
+    border: none;
+    margin: 0 0 20px;
+}
+.t4s-article-content.t4s-rte table tr {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.t4s-article-content.t4s-rte table tr td {
+    width: calc(50% - 10px) !important;
+    height: auto;
+    border: none;
+    padding: 0;
+}
+.t4s-article-related .t4s-article-related-heading {
+    font-size: 20px;
+    margin-bottom: 28px;
+    font-weight: 500;
+}
+.t4s-rte a:not(.btn):not(.t4s-link):not(.t4s-btn):not(.t4s-button):not(.t4s-a) {
+    border-bottom: none !important;
+}
+.t4s-article-related .t4s-post-content .t4s-post-time {
+    font-style: normal;
+}
+.t4s-article-related .t4s-post-content h5.t4s-post-title {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+.t4s-article-heading-category.t4s-fnt-fm-2 span.t4s-comment-number.t4s-pr {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .template-article .header-banner {
+    padding: 30px 0 20px;
+  }
+  .t4s-page-heading-article .t4s-article-heading-category.t4s-fnt-fm-2 {
+    margin: 0 0 15px;
+  }
+  .t4s-article-content.t4s-rte table {
+    margin: 0 0 10px;
+  }
+  
+}
+
+
+
+

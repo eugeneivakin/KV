@@ -1,0 +1,70 @@
+{{ 'custom_vrt_selector-produucts.css' | asset_url | stylesheet_tag }}
+{% comment %} {%- assign variant_color_order_json = settings.variant_color_order | json -%} {% endcomment %}
+{%- if product.metafields.custom.color_variant_products -%}
+  <script>
+    console.log('color variant products');
+  </script>
+  {%- assign variant_products = product.metafields.custom.color_variant_products.value -%}
+  <div class="product-color-variants">
+    {% comment %} {{ variant_color_order_json }} {% endcomment %}
+    <div class="product-color-variants__grid">
+      {%- for variant_product in variant_products -%}
+        {%- assign is_available = false -%}
+        {%- for variant in variant_product.variants -%}
+          {%- if variant.available -%}
+            {%- assign is_available = true -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        <div
+          class="color-variant{% if variant_product.url == request.path %} color-variant--active{% endif %}{% if is_available %} in-stock{% else %} out-of-stock{% endif %}"
+          {% if variant_product.url != request.path %}
+            style="order: {{ forloop.index }};"
+          {% endif %}
+        >
+          <div class="color-variant__image-container">
+            {%- if variant_product.url == request.path -%}
+              <div class="color-variant__image-overlay{% if is_available == false %} color-variant__image-overlay--soldout{% endif %}">
+                <img
+                  class="color-variant__image{% if is_available == false %} color-variant__image--soldout{% endif %}"
+                  src="{{ variant_product.featured_image | img_url: '140x' }}"
+                  alt="{{ variant_product.title }}"
+                  {% if is_available == false %}
+                    style="opacity: 0.5;"
+                  {% endif %}
+                >
+                {% if is_available == false %}
+                  <span class="sold-out-text">Sold Out</span>
+                {% endif %}
+              </div>
+            {%- else -%}
+              <a href="{{ variant_product.url }}" class="color-variant__link">
+                <div class="color-variant__image-overlay{% if is_available == false %} color-variant__image-overlay--soldout{% endif %}">
+                  <img
+                    class="color-variant__image{% if is_available == false %} color-variant__image--soldout{% endif %}"
+                    src="{{ variant_product.featured_image | img_url: '140x' }}"
+                    alt="{{ variant_product.title }}"
+                    {% if is_available == false %}
+                      style="opacity: 0.5;"
+                    {% endif %}
+                  >
+                  {% if is_available == false %}
+                    <span class="sold-out-text">Sold Out</span>
+                  {% endif %}
+                </div>
+              </a>
+            {%- endif -%}
+          </div>
+          <div class="color-variant__label">
+            {{ variant_product.title | split: ' ' | last }}
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- else -%}
+  <script>
+    console.log('no color variant products');
+  </script>
+{%- endif -%}

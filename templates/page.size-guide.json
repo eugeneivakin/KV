@@ -1,0 +1,123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "heading": {
+      "type": "heading-template",
+      "blocks": {
+        "1_Whtjhj": {
+          "type": "1",
+          "settings": {
+            "heading": "Size guide",
+            "fontf": "inherit",
+            "text_cl": "#ffffff",
+            "text_fs": 20,
+            "text_lh": 0,
+            "text_fw": 400,
+            "text_ls": 0,
+            "font_italic": false,
+            "font_uppercase": false,
+            "text_shadow": false,
+            "text_mgb": 0,
+            "hidden_mobile": false,
+            "text_fs_mb": 20,
+            "text_lh_mb": 0,
+            "text_ls_mb": 0,
+            "text_mgb_mobile": 0
+          }
+        }
+      },
+      "block_order": [
+        "1_Whtjhj"
+      ],
+      "settings": {
+        "heading_fullwidth": false,
+        "use_specify_image": true,
+        "parallax": false,
+        "color": "#000000",
+        "overlay": 54,
+        "padding": 50,
+        "paddingmb": 50,
+        "mg_b": 50,
+        "mg_bmb": 50,
+        "content_align": "t4s-text-center",
+        "bg_pos": "center center",
+        "bg_repeat": "no-repeat",
+        "bg_size": "cover",
+        "use_cus_css": false,
+        "code_cus_css": ".SectionID {\nbackground-color:red\n}"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": "60px,,60px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": ""
+      }
+    },
+    "custom_html_WryRfT": {
+      "type": "custom-html",
+      "disabled": true,
+      "settings": {
+        "code": "<div class=\"sizes-table\">\n\t\t\t\t\t<div class=\"sizes-ttl-wr\">\n\t\t\t\t\t\t<div class=\"title-26\">Size guide</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"h-20\"></div>\n\t\t\t\t\t<div class=\"text-grey-4f5b64\">\n\t\t\t\t\t\t<div class=\"text-14\">Choosing the size, please use your own measurements and compare them with the size parameters given in our size guide.</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"h-30\"></div>\n<div class=\"size-table-div\">\n\t\t\t\t\t\t<div class=\"size-table-hd\">\n\t\t\t\t\t\t\t<div id=\"w-node-f750cc6a-1154-6222-c8c3-e944b5ef40d2-c6c9d467\" class=\"size-ttl-left hd\">\n\t\t\t\t\t\t\t\t<div>Size</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_6859be5b-1ace-80ac-c131-d9b431a73cbd-c6c9d467\" class=\"size-ttl-center hd\">\n\t\t\t\t\t\t\t\t<div>XS</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-f0aa3fd1-1541-63db-1f63-23ba890fa420-c6c9d467\" class=\"size-ttl-center hd\">\n\t\t\t\t\t\t\t\t<div>S</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-a1576ec8-fd4f-9a83-3d9b-2b5b9c4efa58-c6c9d467\" class=\"size-ttl-center hd\">\n\t\t\t\t\t\t\t\t<div>M</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-a2c5133a-ef58-c4b0-c3f3-d9394e9526e2-c6c9d467\" class=\"size-ttl-center last\">\n\t\t\t\t\t\t\t\t<div>L</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"size-table-row\">\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910dc-c6c9d467\" class=\"size-ttl-left round\">\n\t\t\t\t\t\t\t\t<div>chest Circumference</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910df-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>80-84</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910e2-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>84-88</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910e5-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>88-92</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_92f5e02f-46c6-01c2-96b7-d466c5703256-c6c9d467\" class=\"size-ttl-center round\">\n\t\t\t\t\t\t\t\t<div>92-96</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"size-table-row\">\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910dc-c6c9d467\" class=\"size-ttl-left round\">\n\t\t\t\t\t\t\t\t<div>Hips Circumference</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910df-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>62-66</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910e2-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>66-70</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_00b57250-e748-9832-48e8-27042b9910e5-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>70-74</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_92f5e02f-46c6-01c2-96b7-d466c5703256-c6c9d467\" class=\"size-ttl-center round\">\n\t\t\t\t\t\t\t\t<div>74-78</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"size-table-row\">\n\t\t\t\t\t\t\t<div id=\"w-node-_049e0d5c-3872-aaeb-845a-ebc236794a1d-c6c9d467\" class=\"size-ttl-left\">\n\t\t\t\t\t\t\t\t<div>Waist Circumference</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_097c98c4-4479-a971-dcf3-59df7314c5a1-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>86-90</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_2d1cb092-7ea7-d0c3-d4f9-540bcecdb71f-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>90-94</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-_6dd261db-0496-a3cc-964e-9d7971edfcd4-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>94-98</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div id=\"w-node-e0e6112c-1ba1-332c-6821-f977853dba73-c6c9d467\" class=\"size-ttl-center\">\n\t\t\t\t\t\t\t\t<div>98-102</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"h-40\"></div>\n\t\t\t\t\t\n\t\t\t\t\t<div class=\"title-26\">How to measure:</div>\n\t\t\t\t\t<div class=\"h-20\"></div>\n\t\t\t\t\t<ul role=\"list\" class=\"sizes-list\">\n\t\t\t\t\t\t<li class=\"sizes-list-item\">\n\t\t\t\t\t\t\t<div class=\"size-list-point\"></div>\n\t\t\t\t\t\t\t<div class=\"list-txt-wr\">\n\t\t\t\t\t\t\t\t<div class=\"title-16\">Chest Circumference</div>\n\t\t\t\t\t\t\t\t<div class=\"text-grey-4f5b64\">\n\t\t\t\t\t\t\t\t\t<div class=\"title-14\">Measure your chest circumference using a measuring tape, placing it under your armpits and along the most protruding part of your chest. It is necessary that the measuring tape fits your body closely and be parallel to the ground.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class=\"sizes-list-item\">\n\t\t\t\t\t\t\t<div class=\"size-list-point\"></div>\n\t\t\t\t\t\t\t<div class=\"list-txt-wr\">\n\t\t\t\t\t\t\t\t<div class=\"title-16\">Waist Circumference</div>\n\t\t\t\t\t\t\t\t<div class=\"text-grey-4f5b64\">\n\t\t\t\t\t\t\t\t\t<div class=\"title-14\">To measure your waist, the first step is to take off your shirt, then stand up straight and breathe out. In this position, keep the edge of the measuring tape on your navel and wrap it around the narrowest part of your waist.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li class=\"sizes-list-item\">\n\t\t\t\t\t\t\t<div class=\"size-list-point\"></div>\n\t\t\t\t\t\t\t<div class=\"list-txt-wr\">\n\t\t\t\t\t\t\t<div class=\"title-16\">Hips Circumference</div>\n\t\t\t\t\t\t\t\t<div class=\"text-grey-4f5b64\">\n\t\t\t\t\t\t\t\t\t<div class=\"title-14\">Put your feet together and wrap a measuring tape around your hips, placing it on the most protruding part of your glutes. The measuring tape should be parallel to the ground and closely fitted to your body.</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t</div>",
+        "layout": "t4s-container-wrap",
+        "cl_bg": "",
+        "cl_bg_gradient": "",
+        "mg": ",,50px,",
+        "pd": "",
+        "mg_tb": "",
+        "pd_tb": "",
+        "mg_mb": ",,30px,",
+        "pd_mb": "",
+        "use_cus_css": false,
+        "code_cus_css": ""
+      }
+    },
+    "sidebar-page": {
+      "type": "sidebar-page",
+      "blocks": {
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08": {
+          "type": "blog_cate",
+          "settings": {
+            "title": "Blog categories",
+            "cat_link_list": "",
+            "count": true
+          }
+        }
+      },
+      "block_order": [
+        "f69681ed-b75e-42de-be58-fdf73b3b7e08"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable_drawer": false,
+        "space": 50,
+        "size": "medium",
+        "br_style": "none",
+        "brcolor": "#222222",
+        "sidebar_bdr": 5,
+        "sidebar_pd": 10
+      }
+    }
+  },
+  "order": [
+    "heading",
+    "main",
+    "custom_html_WryRfT",
+    "sidebar-page"
+  ]
+}

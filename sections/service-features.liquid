@@ -1,0 +1,280 @@
+{{ 'section.css' | asset_url | stylesheet_tag }}
+{{ 'service-features.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign sid = section.id
+  assign se_stts = section.settings
+  assign stt_layout = se_stts.layout
+  assign stt_image_bg = se_stts.image_bg
+  if stt_layout == 't4s-se-container' 
+    assign html_layout = '<div class="t4s-container">__</div></div>' | split: '__'
+  elsif stt_layout == 't4s-container-wrap'
+    assign html_layout = '<div class="t4s-container">__</div>' | split: '__'
+  else
+    assign html_layout = '__' | split: '__'
+  endif
+  assign t4s_se_class = 't4s_nt_se_' | append: sid
+  if se_stts.use_cus_css and se_stts.code_cus_css != blank
+    render 'se_cus_css', code_cus_css: se_stts.code_cus_css, t4s_se_class: t4s_se_class
+  endif
+-%}
+<div class="t4s-section-inner {{ t4s_se_class }} t4s_nt_se_{{ sid }} {{ stt_layout }}{% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} t4s-has-imgbg lazyloadt4s{% endif %}" {% if stt_image_bg != blank and stt_layout != 't4s-se-container' %} data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2"{% endif %} {% render 'section_style', se_stts: se_stts -%}>
+  {{- html_layout[0] -}}
+  {%- if stt_layout == 't4s-se-container' -%}
+    
+    <div class="t4s-container-inner{% if stt_image_bg != blank %} t4s-has-imgbg lazyloadt4s{% endif %}" {% if stt_image_bg != blank %} data-bgset="{{ stt_image_bg | image_url: width: 1 }}" data-sizes="auto"  data-optimumx="2"{% endif %}>{% endif -%}
+  <div class="t4s-service-features" data-section-id="{{ sid }}" style="--bg-color: {{ se_stts.bg_color }};--bg-gradient: {{ se_stts.cl_bg_gradient }};--border-cl: {{ se_stts.border_cl }};--text-color: {{ se_stts.text_color }};--box-bg: {{ se_stts.box_bg_color }};--icon-color: {{ se_stts.icon_color }};--border-radius: {{ se_stts.border_radius }}px;--padding: {{ se_stts.padding }}px;--padding-bottom: {{ se_stts.padding_bottom }}px;--margin-top: {{ se_stts.margin_top }}px;--margin-bottom: {{ se_stts.margin_bottom }}px;">
+    <div class="t4s-service-features__container">
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          {%- assign bk_stts = block.settings -%}
+          <div class="t4s-service-features__item" {{ block.shopify_attributes }}>
+            <div class="t4s-service-features__icon">
+              {%- if bk_stts.icon_svg != blank -%}
+                {{ bk_stts.icon_svg }}
+              {%- elsif bk_stts.icon_image != blank -%}
+                <img class="lazyloadt4s" data-src="{{ bk_stts.icon_image | image_url: width: 80 }}" data-sizes="auto" src="{% render 'img_svg', w: 80, h: 80 %}" width="80" height="80" alt="{{ bk_stts.title | escape }}">
+              {%- else -%}
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 4L6 12V24C6 32.5 10.5 40.3 18 44L24 47L30 44C37.5 40.3 42 32.5 42 24V12L24 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {%- endif -%}
+            </div>
+            <div class="t4s-service-features__content">
+              <h3 class="t4s-service-features__title">{{ bk_stts.title }} </h3>
+              <p class="t4s-service-features__subtitle">{{ bk_stts.subtitle }}</p>
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- endif -%}
+    </div>
+  </div>
+  {%- if stt_layout == 't4s-se-container' -%}</div>{%- endif -%}
+  {{- html_layout[1] -}}
+</div>
+
+<script src="{{ 'service-features.js' | asset_url }}" defer></script>
+<style>
+.shopify-section.t4s-section.t4s-section-all.t4s-service-features{
+    margin: {{ se_stts.margin_top | default: 40 }}px 0 {{ se_stts.margin_bottom | default: 40 }}px 0;
+}
+.t4s-service-features {
+  background-color: {{ se_stts.bg_color | default: '#2a2a2a' }};
+  padding: {{ se_stts.padding | default: 40 }}px 0 {{ se_stts.padding_bottom | default: 40 }}px 0;
+}
+</style>
+
+{%- schema -%}
+{
+  "name": "Service Features",
+  "tag": "section",
+  "class": "t4s-section t4s-section-all t4s-service-features",
+  "settings": [
+    {
+      "type": "header",
+      "content": "1. General options"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color",
+      "default": "#2a2a2a"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "icon_color",
+      "label": "Icon color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "label": "Section padding",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding from background",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "default": 40,
+      "info": "Bottom padding of the background block"
+    },
+    {
+      "type": "header",
+      "content": "Margin from background"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin top",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 0,
+      "info": "Margin top"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 0,
+      "info": "Margin bottom"
+    },
+    {
+      "type": "header",
+      "content": "2. Design options"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "default": "t4s-container-wrap",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "t4s-se-container",
+          "label": "Container"
+        },
+        {
+          "value": "t4s-container-wrap",
+          "label": "Wrapped container"
+        },
+        {
+          "value": "t4s-container-fluid",
+          "label": "Full width"
+        }
+      ]
+    },
+    {
+      "type": "color",
+      "id": "cl_bg",
+      "label": "Background"
+    },
+    {
+      "type": "color_background",
+      "id": "cl_bg_gradient",
+      "label": "Background gradient"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg",
+      "label": "Background image"
+    },
+    {
+      "type": "header",
+      "content": "4. Custom css"
+    },
+    {
+      "id": "use_cus_css",
+      "type": "checkbox",
+      "label": "Use custom css",
+      "default": false,
+      "info": "If you want custom style for this section."
+    },
+    {
+      "id": "code_cus_css",
+      "type": "textarea",
+      "label": "Code custom css",
+      "info": "Use selector .SectionID to style css"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "header",
+          "content": "+ Icon options"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG icon code",
+          "info": "Paste your SVG code here"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon image",
+          "info": "Alternative to SVG icon"
+        },
+        {
+          "type": "header",
+          "content": "+ Text options"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Feature title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "Feature subtitle"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Service Features",
+      "category": "Homepage",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M8 16L24 8L40 16V32C40 36.4183 37.3137 40.2091 33.5 41.5L24 45L14.5 41.5C10.6863 40.2091 8 36.4183 8 32V16Z\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M8 16L24 24L40 16\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M24 24V45\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M16 20L24 16L32 20\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+            "title": "Certified",
+            "subtitle": "Packaging"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"18\" width=\"20\" height=\"16\" rx=\"2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 18V14C18 11.7909 19.7909 10 22 10H26C28.2091 10 30 11.7909 30 14V18\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M20 24H28M24 20V28\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+            "title": "Fast",
+            "subtitle": "Shipping"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"20\" r=\"8\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M12 36C12 30 17 26 24 26C31 26 36 30 36 36\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
+            "title": "Premium",
+            "subtitle": "Quality"
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "icon_svg": "<svg width=\"48\" height=\"48\" viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"24\" cy=\"24\" r=\"10\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M18 24L22 28L30 20\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"24\" cy=\"12\" r=\"2\" fill=\"currentColor\"/><path d=\"M24 8V6M24 42V40M8 24H6M42 24H40M12.93 12.93L11.51 11.51M36.49 36.49L35.07 35.07M12.93 35.07L11.51 36.49M36.49 11.51L35.07 12.93\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"/></svg>",
+            "title": "Authenticity",
+            "subtitle": "Guarantee"
+          }
+        }
+      ]
+    }
+  ]
+}
+{%- endschema -%}
+
