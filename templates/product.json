@@ -463,7 +463,9 @@
           }
         }
       },
-      "block_order": ["okendo_reviews_widget_mcWcJY"],
+      "block_order": [
+        "okendo_reviews_widget_mcWcJY"
+      ],
       "settings": {}
     },
     "accordion_BABBKM": {
@@ -518,7 +520,14 @@
           }
         }
       },
-      "block_order": ["accor_item_nbGUYm", "accor_item_eD3zTe", "accor_item_BHy9BB", "accor_item_Qfk43a", "accor_item_mGhRQ8", "accor_item_BwmDKA"],
+      "block_order": [
+        "accor_item_nbGUYm",
+        "accor_item_eD3zTe",
+        "accor_item_BHy9BB",
+        "accor_item_Qfk43a",
+        "accor_item_mGhRQ8",
+        "accor_item_BwmDKA"
+      ],
       "name": "Accordion",
       "settings": {
         "design_heading": "1",
@@ -528,12 +537,12 @@
         "top_subheading": "",
         "tophead_mb": 30,
         "accor_des": "1",
-        "title_cl": "#222",
+        "title_cl": "#222222",
         "bg_title_cl": "#f6f6f8",
-        "title_active_cl": "#000",
+        "title_active_cl": "#000000",
         "bg_title_active_cl": "#f6f6f8",
         "content_cl": "#878787",
-        "bg_content_cl": "#fff",
+        "bg_content_cl": "#ffffff",
         "content_align": "t4s-text-start",
         "auto_active": true,
         "layout": "t4s-container-wrap",
@@ -551,5 +560,13 @@
       }
     }
   },
-  "order": ["breadcrumb", "main", "sidebar", "product-recommendations", "recently-viewed-products", "1767106266ec0bf55c", "accordion_BABBKM"]
+  "order": [
+    "breadcrumb",
+    "main",
+    "sidebar",
+    "product-recommendations",
+    "recently-viewed-products",
+    "1767106266ec0bf55c",
+    "accordion_BABBKM"
+  ]
 }
