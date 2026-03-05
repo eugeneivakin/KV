@@ -11,6 +11,7 @@
   "sections": {
     "breadcrumb": {
       "type": "brc-nav-product",
+      "disabled": true,
       "settings": {
         "breadcrumb_pr": true,
         "back_next_pr": true,
@@ -19,8 +20,29 @@
       }
     },
     "main": {
-      "type": "main-product",
+      "type": "x-main-product",
       "blocks": {
+        "inventory_qty_VLWnqC": {
+          "type": "inventory_qty",
+          "settings": {
+            "icon": "2",
+            "icon_name": "hourglass-half",
+            "ani": "none",
+            "stock": "3",
+            "qty": 10,
+            "total_items": 100,
+            "stock_from": 12,
+            "stock_to": 20,
+            "al": "center",
+            "mess": "HURRY! ONLY [stock_number] LEFT IN STOCK.",
+            "size": 16,
+            "progress": true,
+            "wbar": 100,
+            "stock_bg_process": "#f76b6a",
+            "bgten": "#ec0101",
+            "stock_bg": "#ffe8e8"
+          }
+        },
         "meta": {
           "type": "meta",
           "settings": {
@@ -195,6 +217,7 @@
         }
       },
       "block_order": [
+        "inventory_qty_VLWnqC",
         "meta",
         "title",
         "price_review",
@@ -213,7 +236,7 @@
       "settings": {
         "pr_layout": "default",
         "enable_sticky_info": false,
-        "media_layout": "two_columns",
+        "media_layout": "thumbnails_bottom",
         "media_size": "medium",
         "thumb_lr_size": "medium",
         "image_ratio": "ratioadapt",

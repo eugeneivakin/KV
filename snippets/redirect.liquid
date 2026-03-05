@@ -1,0 +1,73 @@
+<script>
+  (function () {
+    // List of allowed pages
+    const allowedPages = [
+      '{{ pages["payment-and-delivery"].url |  prepend: shop.url  }}',
+      '{{ pages["terms-of-service"].url |  prepend: shop.url }}',
+      '{{ all_products["tennis-skirt-kv-white"].url |  prepend: shop.url }}',
+    ];
+
+    // Redirect URL
+    const redirectUrl = '{{ all_products["tennis-skirt-kv-white"].url |  prepend: shop.url }}';
+
+    // Get the current full URL and path of the page
+    const currentUrl = window.location.href;
+    const currentPath = window.location.pathname;
+
+    // Function checks if page is allowed
+    function isPageAllowed(url, path) {
+      // Full URL check (exact match)
+      if (allowedPages.includes(url)) {
+        return true;
+      }
+
+      // Path check for each resolved URL
+      for (let allowedPage of allowedPages) {
+        try {
+          const allowedUrl = new URL(allowedPage);
+          const allowedPath = allowedUrl.pathname;
+
+          // Exact Path Match
+          if (allowedPath === path) {
+            return true;
+          }
+
+          // Checking for a match between the beginning of the path (for dynamic pages)
+          if (allowedPath !== '/' && path.startsWith(allowedPath)) {
+            return true;
+          }
+        } catch (e) {
+          // If not URL, compare as strings
+          if (allowedPage === path || (allowedPage !== '/' && path.startsWith(allowedPage))) {
+            return true;
+          }
+        }
+      }
+
+      return false;
+    }
+
+    // Checking the current page
+    if (!isPageAllowed(currentUrl, currentPath)) {
+      console.log('Page not allowed. Redirect to:', redirectUrl);
+      window.location.href = redirectUrl;
+    }
+  })();
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const checkoutUrl = '/checkout';
+
+    // Using the correct theme event: add:cart:success
+    if (window.jQuery_T4NT) {
+      jQuery_T4NT(document).on('add:cart:success', function () {
+        console.log('✅ Event: add:cart:success triggered!');
+        window.location.href = checkoutUrl;
+      });
+      console.log('✅ Event listener added for add:cart:success');
+    } else {
+      console.error('❌ jQuery_T4NT not found!');
+    }
+  });
+</script>

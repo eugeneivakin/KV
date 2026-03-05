@@ -2908,6 +2908,13 @@
       "extras": {
         "type": "extras",
         "settings": {}
+      },
+      "x-header": {
+        "type": "x-header",
+        "settings": {
+          "logo": "shopify://shop_images/KV_Logo_Black.svg",
+          "menu": "main-menu-landing"
+        }
       }
     },
     "content_for_index": [],

@@ -1,0 +1,38 @@
+{%- comment -%}
+  ----------------------------------------------------------------------------------------------------------------------
+  ICON
+  ----------------------------------------------------------------------------------------------------------------------
+
+  Render a specific icon.
+
+  ********************************************
+  Supported variables
+  ********************************************
+
+  * with attribute: the name of the icon to render (eg: {%- render 'icon' with 'cart' -%}
+  * class: an optional class to add to the SVG icon
+  * offset: if set to true, the icon will be offsetted based on its height on the vertical axis to be aligned with neighboring element
+  * direction_aware: if set to true, the icon will be rotated 180deg in RTL context
+  * width: an optional width to render the icon (the height will scale accordingly)
+  * stroke_width: an optional stroke width to use to replace the default global width
+{%- endcomment -%}
+
+{%- capture class -%}{{ class }} icon icon-{{ icon | handle }} {% if offset %}offset-icon{% endif %} {% if direction_aware %}icon--direction-aware{% endif %}{%- endcapture -%}
+
+{%- case icon -%}
+    {%- comment -%} UI {%- endcomment -%}
+  {%- when 'cart' -%}
+    <svg
+      class="{{ class | strip }}"
+      width="{{ width | default: 31 }}"
+      height="31"
+      viewBox="0 0 31 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="currentColor"
+    >
+      <path d="M12.4983 29.9167C14.0641 29.9167 15.3333 28.6474 15.3333 27.0817C15.3333 25.5159 14.0641 24.2467 12.4983 24.2467C10.9326 24.2467 9.66333 25.5159 9.66333 27.0817C9.66333 28.6474 10.9326 29.9167 12.4983 29.9167Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M24.8499 29.9167C26.4156 29.9167 27.6849 28.6474 27.6849 27.0817C27.6849 25.5159 26.4156 24.2467 24.8499 24.2467C23.2842 24.2467 22.0149 25.5159 22.0149 27.0817C22.0149 28.6474 23.2842 29.9167 24.8499 29.9167Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M5.92667 4.59167L9.27667 15.1983C9.79167 16.8283 10.0483 17.6433 10.5433 18.2467C10.9767 18.78 11.5417 19.1917 12.18 19.4467C12.905 19.735 13.7583 19.735 15.4683 19.735H21.8933C23.6033 19.735 24.4567 19.735 25.18 19.4467C25.82 19.1917 26.3833 18.78 26.8183 18.2467C27.3117 17.6433 27.5683 16.8283 28.085 15.1983L28.7667 13.0383L29.1667 11.7617L29.7183 10.0117C29.9152 9.3875 29.9623 8.72574 29.8557 8.08C29.7492 7.43425 29.492 6.82269 29.1051 6.29486C28.7181 5.76702 28.2123 5.33777 27.6285 5.04186C27.0447 4.74595 26.3995 4.59173 25.745 4.59167H5.92667ZM5.92667 4.59167L5.90833 4.53C5.83796 4.29427 5.76014 4.06082 5.675 3.83C5.33758 2.9759 4.76539 2.2347 4.02454 1.69205C3.2837 1.14939 2.40443 0.827415 1.48833 0.763335C1.31667 0.750002 1.12833 0.750002 0.75 0.750002" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+{%- endcase -%}
