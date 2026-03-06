@@ -515,6 +515,7 @@
         "blocks": {
           "top-bar-0": {
             "type": "html",
+            "disabled": true,
             "settings": {
               "html": "",
               "hide": true,
@@ -524,6 +525,7 @@
           },
           "top-bar-1": {
             "type": "text",
+            "disabled": true,
             "settings": {
               "text": "",
               "adding_border": false,
@@ -544,6 +546,7 @@
           },
           "top-bar-2": {
             "type": "cur",
+            "disabled": true,
             "settings": {
               "show_currency": true,
               "show_language": true,
@@ -586,6 +589,7 @@
         "blocks": {
           "mega_jGyzHp": {
             "type": "mega",
+            "disabled": true,
             "settings": {
               "title": "Clothing",
               "url": "",
@@ -606,6 +610,7 @@
           },
           "base_8cazyw": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "Suits & Onesies",
               "url": "shopify://collections/suits-overalls",
@@ -619,6 +624,7 @@
           },
           "base_dM9H3a": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "Dresses",
               "url": "shopify://collections/dresses",
@@ -632,6 +638,7 @@
           },
           "mega_nxhx9K": {
             "type": "mega",
+            "disabled": true,
             "settings": {
               "title": "Accessories",
               "url": "",
@@ -652,9 +659,75 @@
           },
           "base_gWtXeJ": {
             "type": "base",
+            "disabled": true,
             "settings": {
               "title": "About us",
               "url": "shopify://pages/about-us",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_QCB3Hc": {
+            "type": "base",
+            "settings": {
+              "title": "Shipping & Returns",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_KNeGGT": {
+            "type": "base",
+            "settings": {
+              "title": "Size Guide",
+              "url": "shopify://pages/size-guide",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_tXrCaU": {
+            "type": "base",
+            "settings": {
+              "title": "Reviews",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_ezbPpQ": {
+            "type": "base",
+            "settings": {
+              "title": "FAQ",
+              "url": "/",
+              "open_link": "_self",
+              "icon": "",
+              "cus_cl": false,
+              "cl": "#ec0101",
+              "lb": "",
+              "lb_cl": ""
+            }
+          },
+          "base_AbBVTK": {
+            "type": "base",
+            "settings": {
+              "title": "Payment and Delivery",
+              "url": "/",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -669,7 +742,12 @@
           "base_8cazyw",
           "base_dM9H3a",
           "mega_nxhx9K",
-          "base_gWtXeJ"
+          "base_gWtXeJ",
+          "base_QCB3Hc",
+          "base_KNeGGT",
+          "base_tXrCaU",
+          "base_ezbPpQ",
+          "base_AbBVTK"
         ],
         "custom_css": [
           ".t4s-type__mega > .t4s-sub-menu {min-width: 100px;}",
@@ -680,7 +758,7 @@
           "full_header": true,
           "height": 80,
           "arrow": false,
-          "align": "center",
+          "align": "start",
           "hover": "hover_sideup",
           "enable_active": false,
           "h_navmb": 60,
@@ -690,9 +768,9 @@
           "clnav_hover": "#222222",
           "h_icon": "kalles",
           "hover_icon": "2",
-          "show_search": true,
-          "show_acc": true,
-          "show_wis": true,
+          "show_search": false,
+          "show_acc": false,
+          "show_wis": false,
           "cart_des": "1",
           "bg_hc": "#000000",
           "cl_hc": "#ffffff",
@@ -1247,8 +1325,74 @@
       "mb_nav": {
         "type": "mb_nav",
         "blocks": {
+          "menu_TCjUgm": {
+            "type": "menu",
+            "settings": {
+              "title": "Shipping & Returns",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "0",
+              "icon": "las la-chair"
+            }
+          },
+          "menu_J3JxiR": {
+            "type": "menu",
+            "settings": {
+              "title": "Size Guide",
+              "url": "shopify://pages/size-guide",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "0",
+              "icon": "las la-chair"
+            }
+          },
+          "menu_iPVmcc": {
+            "type": "menu",
+            "settings": {
+              "title": "Reviews",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "0",
+              "icon": "las la-chair"
+            }
+          },
+          "menu_T8LJbW": {
+            "type": "menu",
+            "settings": {
+              "title": "FAQ",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "0",
+              "icon": "las la-chair"
+            }
+          },
+          "menu_bqibPh": {
+            "type": "menu",
+            "settings": {
+              "title": "Payment and Delivery",
+              "url": "",
+              "open_link": "_self",
+              "menu": "",
+              "lb": "",
+              "lb_cl": "",
+              "icons_op": "0",
+              "icon": "las la-chair"
+            }
+          },
           "mb_nav-0": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Clothing",
               "url": "",
@@ -1262,6 +1406,7 @@
           },
           "mb_nav-1": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Suits & Onesies",
               "url": "shopify://collections/suits-overalls",
@@ -1275,6 +1420,7 @@
           },
           "mb_nav-2": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Dresses",
               "url": "shopify://collections/dresses",
@@ -1288,6 +1434,7 @@
           },
           "25fa7ecf-2db0-4747-b093-a1299099917e": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Accessories",
               "url": "",
@@ -1301,6 +1448,7 @@
           },
           "58800ed8-befe-449a-b8f8-ea86620bef6f": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "About us",
               "url": "shopify://pages/about-us",
@@ -1314,6 +1462,7 @@
           },
           "mb_nav-3": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "Blog",
               "url": "shopify://blogs/blog",
@@ -1327,6 +1476,7 @@
           },
           "mb_nav-4": {
             "type": "wis",
+            "disabled": true,
             "settings": {}
           },
           "mb_nav-5": {
@@ -1336,18 +1486,26 @@
           },
           "mb_nav-6": {
             "type": "acc",
+            "disabled": true,
             "settings": {}
           },
           "mb_nav-8": {
             "type": "lang",
+            "disabled": true,
             "settings": {}
           },
           "mb_nav-9": {
             "type": "cur",
+            "disabled": true,
             "settings": {}
           }
         },
         "block_order": [
+          "menu_TCjUgm",
+          "menu_J3JxiR",
+          "menu_iPVmcc",
+          "menu_T8LJbW",
+          "menu_bqibPh",
           "mb_nav-0",
           "mb_nav-1",
           "mb_nav-2",
