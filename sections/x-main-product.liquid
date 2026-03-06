@@ -249,6 +249,7 @@
 
 {{ 'pre_flickityt4s.min.css' | asset_url | stylesheet_tag }}
 {{ 'main-product.css' | asset_url | stylesheet_tag }}
+{{ 'x-main-product.css' | asset_url | stylesheet_tag }}
 
 <div class="t4s-container t4s-main-product__content is--layout_{{ se_stts.pr_layout }} t4s-product-media__{{ media_layout }} t4s-product-thumb-size__{{ se_stts.thumb_lr_size }}">
   <div class="t4s-row">
@@ -262,6 +263,10 @@
         {% endif %}
       >
         <div class="t4s-{{ class_media }} t4s-col-12 t4s-col-item t4s-product__media-wrapper">
+          {% if product.metafields.custom.about_model != blank %}
+            <p class="t4s-main-product__about-model">{{ product.metafields.custom.about_model }}</p>
+          {% endif %}
+
           {%- case media_layout -%}
             {%- when 'no_media_size' -%}
               {%- assign image = settings.placeholder_img -%}
@@ -317,6 +322,7 @@
 
             {%- when 'one_media_size' -%}
               {%- assign media = product_media.first -%}
+              123
               <div data-product-single-media-group class="t4s-product__one_media t4s-pr" timeline hdt-reveal="slide-in">
                 <div
                   data-t4s-gallery
@@ -361,6 +367,16 @@
               {{ 'slider-settings.css' | asset_url | stylesheet_tag }}
               <div class="t4s-row t4s-g-0" timeline hdt-reveal="slide-in">
                 <div data-product-single-media-group class="{{ class_main }}t4s-col-12 t4s-col-item t4s-pr">
+                  {% if pr_tags.size > 0 %}
+                    <div class="t4s-tags-wrapper">
+                      {% for tag in pr_tags -%}
+                        <span class="t4s-dib">
+                          {{- tag -}}
+                        </span>
+                      {% endfor -%}
+                    </div>
+                  {% endif %}
+
                   <div
                     data-t4s-gallery
                     data-main-media
@@ -386,12 +402,14 @@
                       </div>
                     {%- endif -%}
                   </div>
-                  <div
-                    data-product-single-badge
-                    data-sort="sale,new,soldout,preOrder,custom"
-                    class="t4s-single-product-badge lazyloadt4s t4s-pa t4s-pe-none t4s-op-0"
-                    data-rendert4s="css:{{ 'single-pr-badge.css' | asset_url }}"
-                  ></div>
+                  {% comment %}
+                    <div
+                      data-product-single-badge
+                      data-sort="sale,new,soldout,preOrder,custom"
+                      class="t4s-single-product-badge lazyloadt4s t4s-pa t4s-pe-none t4s-op-0"
+                      data-rendert4s="css:{{ 'single-pr-badge.css' | asset_url }}"
+                    ></div>
+                  {% endcomment %}
                   {%- render 'product-btns', se_stts: se_stts, product: product -%}
                 </div>
 
@@ -518,7 +536,7 @@
                     class="t4s-product__price-review"
                     style="--price-size:{{ bk_stts.size_price_pr }}px;--price-weight:{{ bk_stts.fw_price_pr }};--price-color:{{ bk_stts.price_color }};--price-sale-color:{{ bk_stts.price_sale_color }};"
                   >
-                    {%- render 'product-price-single',
+                    {%- render 'x-product-price-single',
                       variant: current_variant,
                       product: product,
                       PR_no_pick: PR_no_pick,
@@ -631,6 +649,7 @@
                   -%}
 
                 {%- when 'size_delivery_ask' -%}
+                  {%- comment -%}
                   <div class="t4s-extra-link" {{ block.shopify_attributes }}>
                     {%- if bk_size_chart != '1' and pos_sizeg == '1' %}{{ html_sizeg }}{% endif -%}
 
@@ -670,6 +689,7 @@
                       </a>
                     {%- endif -%}
                   </div>
+                  {%- endcomment -%}
 
                 {%- when 'meta' -%}
                   {%- assign ck_meta = false -%}
@@ -1201,6 +1221,8 @@
                       {%- endfor -%}
                     </ul>
                   </div>
+                {%- when 'benefits' -%}
+                  {% render 'x-product-info-benefits', block: block %}
               {%- endcase -%}
             {%- endfor -%}
           </div>
@@ -4961,6 +4983,112 @@
           "id": "product_based",
           "label": "Product list",
           "info": "Maximum choose: 50 products"
+        }
+      ]
+    },
+    {
+      "type": "benefits",
+      "name": "Benefits",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Benefit #1"
+        },
+        {
+          "type": "select",
+          "id": "icon_1",
+          "label": "Icon",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "shorts",
+              "label": "Shorts"
+            },
+            {
+              "value": "player",
+              "label": "Player"
+            },
+            {
+              "value": "winter_1",
+              "label": "Winter 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title_1",
+          "label": "Label"
+        },
+        {
+          "type": "header",
+          "content": "Benefit #2"
+        },
+        {
+          "type": "select",
+          "id": "icon_2",
+          "label": "Icon",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "shorts",
+              "label": "Shorts"
+            },
+            {
+              "value": "player",
+              "label": "Player"
+            },
+            {
+              "value": "winter_1",
+              "label": "Winter 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title_2",
+          "label": "Label"
+        },
+        {
+          "type": "header",
+          "content": "Benefit #3"
+        },
+        {
+          "type": "select",
+          "id": "icon_3",
+          "label": "Icon",
+          "default": "none",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "shorts",
+              "label": "Shorts"
+            },
+            {
+              "value": "player",
+              "label": "Player"
+            },
+            {
+              "value": "winter_1",
+              "label": "Winter 1"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title_3",
+          "label": "Label"
         }
       ]
     }

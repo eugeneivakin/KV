@@ -244,7 +244,10 @@
       "product_tag": "Tags:",
       "product_size_guide": "Size Guide",
       "delivery_return": "Delivery & Return",
-      "ask_question": "Ask a Question"
+      "ask_question": "Ask a Question",
+      "price": {
+        "percent": "-{{ amount }}% off"
+      }
     },
     "product_card": {
       "read_more": "Read more",

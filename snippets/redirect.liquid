@@ -4,11 +4,11 @@
     const allowedPages = [
       '{{ pages["payment-and-delivery"].url |  prepend: shop.url  }}',
       '{{ pages["terms-of-service"].url |  prepend: shop.url }}',
-      '{{ all_products["tennis-skirt-kv-white"].url |  prepend: shop.url }}',
+      '{{ all_products["tennis-skirt-kv-test"].url |  prepend: shop.url }}',
     ];
 
     // Redirect URL
-    const redirectUrl = '{{ all_products["tennis-skirt-kv-white"].url |  prepend: shop.url }}';
+    const redirectUrl = '{{ all_products["tennis-skirt-kv-test"].url |  prepend: shop.url }}';
 
     // Get the current full URL and path of the page
     const currentUrl = window.location.href;

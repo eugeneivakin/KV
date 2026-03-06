@@ -1,0 +1,28 @@
+<ul class="t4s-main-product__block-benefits">
+  {% if block.settings.title_1 != blank %}
+    <li>
+      <div class="icon-wrapper">
+        {%- render 'icons', icon: block.settings.icon_1 -%}
+      </div>
+      <p>{{ block.settings.title_1 }}</p>
+    </li>
+  {% endif %}
+
+  {% if block.settings.title_2 != blank %}
+    <li>
+      <div class="icon-wrapper">
+        {%- render 'icons', icon: block.settings.icon_2 -%}
+      </div>
+      <p>{{ block.settings.title_2 }}</p>
+    </li>
+  {% endif %}
+
+  {% if block.settings.title_3 != blank %}
+    <li>
+      <div class="icon-wrapper">
+        {%- render 'icons', icon: block.settings.icon_3 -%}
+      </div>
+      <p>{{ block.settings.title_3 }}</p>
+    </li>
+  {% endif %}
+</ul>

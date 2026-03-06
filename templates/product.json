@@ -53,7 +53,7 @@
             "icon": "2",
             "icon_name": "hourglass-half",
             "ani": "none",
-            "stock": "3",
+            "stock": "2",
             "qty": 10,
             "total_items": 100,
             "stock_from": 12,
@@ -82,6 +82,17 @@
             "price_sale_color": "#ec0101"
           }
         },
+        "benefits_chq9zK": {
+          "type": "benefits",
+          "settings": {
+            "icon_1": "shorts",
+            "title_1": "Built-in shorts",
+            "icon_2": "player",
+            "title_2": "High-waist fit",
+            "icon_3": "winter_1",
+            "title_3": "Breathable fabric"
+          }
+        },
         "custom_vrt_selector_fjbWtQ": {
           "type": "custom_vrt_selector",
           "disabled": true,
@@ -104,7 +115,7 @@
         "form": {
           "type": "form",
           "settings": {
-            "selector_mode": "circle",
+            "selector_mode": "block",
             "color_mode": "color is-sw-cl__round",
             "enable_fit_ratio_img": false,
             "color_size": "medium",
@@ -135,6 +146,18 @@
             "qty_val": "1",
             "advance_label": "Choose style",
             "advance_pr_list": []
+          }
+        },
+        "img_RBML78": {
+          "type": "img",
+          "settings": {
+            "al": "start",
+            "mess": "",
+            "size": 16,
+            "source": "1",
+            "wimg": 60,
+            "svg": "american_express,apple_pay,discover,google_pay,jcb,klarna,maestro,master,paypal,shopify_pay,visa,amazon_payments",
+            "height": 24
           }
         },
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
@@ -183,9 +206,11 @@
         "meta",
         "inventory_qty_VLWnqC",
         "price_review",
+        "benefits_chq9zK",
         "custom_vrt_selector_fjbWtQ",
         "size_delivery_ask",
         "form",
+        "img_RBML78",
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8",
         "tab_html_gfJYfH",
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c",
