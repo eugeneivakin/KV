@@ -552,7 +552,7 @@
         "content_cl": "#878787",
         "bg_content_cl": "#ffffff",
         "content_align": "t4s-text-start",
-        "auto_active": true,
+        "auto_active": false,
         "layout": "t4s-container-wrap",
         "custom_width": 1000,
         "cl_bg": "",
