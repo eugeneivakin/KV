@@ -8,6 +8,12 @@
   }
 
   [data-product-single-media-group] {
+    .t4s_ratiocus1 {
+      .t4s_ratio {
+        --t4s-aspect-ratio: calc(0.9488636363636364 * 100%);
+      }
+    }
+
     .t4s-tags-wrapper {
       display: flex;
       flex-direction: row;
@@ -38,7 +44,9 @@
   }
 
   .t4s-carousel__nav-inner {
-    --aspect-ratioapt: 1 !important;
+    &.t4s_ratio {
+      --t4s-aspect-ratio: 100%;
+    }
   }
 
   .t4s-product__price-review {

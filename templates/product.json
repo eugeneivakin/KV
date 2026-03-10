@@ -157,7 +157,7 @@
             "source": "1",
             "wimg": 60,
             "svg": "american_express,apple_pay,discover,google_pay,jcb,klarna,maestro,master,paypal,shopify_pay,visa,amazon_payments",
-            "height": 24
+            "height": 28
           }
         },
         "95d4f334-8ea7-4cd2-b609-2373b1e848b8": {
@@ -169,17 +169,17 @@
         "tab_html_gfJYfH": {
           "type": "tab_html",
           "settings": {
-            "title": "Composition and care",
-            "content": "<p>80% polyamide<br/>20% elastane<br/><br/>To preserve the quality and duration of use of fitness clothing made of fabric, we recommend following the following tips:<br/><br/>1. Washing: We recommend washing in a delicate mode in cold water.<br/><br/>2. Drying: Air dry, avoid direct sunlight.<br/><br/>3. Dry in the washing machine: Avoid high spins.<br/><br/>4. Ironing: Iron carefully at a low temperature.<br/><br/>Following these tips will help preserve the excellent condition and longevity of your clothing.</p>",
-            "page": "wash-care"
+            "title": "Payment and Delivery",
+            "content": "",
+            "page": "payment-and-delivery"
           }
         },
         "754ad4a0-7308-4a3e-b325-e2f2c0b85d4c": {
           "type": "tab_html",
           "settings": {
-            "title": "About our clothes",
-            "content": "<p>Our sportswear set is the perfect combination of style, comfort, and functionality. Made from premium-quality materials, it provides maximum comfort even during the most intense workouts. The fabric consists of 75% polyester, ensuring durability, wear resistance, and easy care, and 15% spandex, offering elasticity and a perfect fit.</p><p>The material is highly breathable, allowing your skin to “breathe” even during high-intensity activities. You’ll feel comfortable in any temperature or condition. The fabric efficiently wicks away moisture, keeping you dry and fresh throughout the day.</p><p>This sportswear is not only practical but also exceptionally reliable, making it the perfect choice for those who value quality and longevity. Its modern design highlights your figure, boosting confidence with every move. Suitable for both sports and everyday wear, it adds a stylish touch to your look.</p><p>Experience the ultimate in quality and design — this sportswear set will become your favorite companion for any activit!</p>",
-            "page": "wash-care"
+            "title": "Returns & exchanges",
+            "content": "",
+            "page": "returns-exchanges"
           }
         },
         "order_yiTwzt": {
@@ -222,7 +222,7 @@
         "media_layout": "thumbnails_bottom",
         "media_size": "medium",
         "thumb_lr_size": "medium",
-        "image_ratio": "ratioadapt",
+        "image_ratio": "ratiocus1",
         "image_size": "cover",
         "image_position": "8",
         "main_click": "none",
@@ -363,7 +363,14 @@
       "block_order": [
         "okendo_reviews_widget_mcWcJY"
       ],
-      "settings": {}
+      "settings": {
+        "design_heading": "1",
+        "heading_align": "t4s-text-center",
+        "top_heading": "Customer Reviews",
+        "icon_heading": "las la-gem",
+        "top_subheading": "",
+        "tophead_mb": 30
+      }
     },
     "product-recommendations": {
       "type": "product-recommendations",
@@ -479,62 +486,62 @@
     "accordion_BABBKM": {
       "type": "accordion",
       "blocks": {
-        "accor_item_nbGUYm": {
+        "accor_item_Ni4ani": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Orders",
-            "content": "<h3>How do I place an order?</h3><p>Simply add the items you like to your cart, proceed to checkout, fill in your contact and shipping details, choose a payment method, and confirm your purchase.</p><h3>Can I change my order after placing it?</h3><p>If you notice a mistake, please contact our support team <strong>as soon as possible</strong>. We’ll do our best to make changes before the order is shipped.</p>"
+            "title": "Is the fabric see-through?",
+            "content": "<p>Not at all. The skirt is made from a premium breathable fabric that provides reliable coverage. Plus, the built-in shorts ensure you feel comfortable and confident whether you're playing tennis or staying active.</p>"
           }
         },
-        "accor_item_eD3zTe": {
+        "accor_item_KYgTfd": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Payment",
-            "content": "<h3>What payment methods do you accept?</h3><p>We accept major credit and debit cards (Visa, Mastercard), online banking, and other secure payment methods available at checkout depending on your location.</p><h3>Can I pay upon delivery?</h3><p>Cash on delivery may be available in certain regions. If supported, this option will appear during checkout.</p>"
+            "title": "Are there built-in shorts?",
+            "content": "<p>Yes, the skirt features comfortable built-in shorts that provide extra coverage and support. They allow you to move freely and confidently during tennis, workouts, or any active day.</p>"
           }
         },
-        "accor_item_BHy9BB": {
+        "accor_item_ACWN9D": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Shipping",
-            "content": "<h3>How long does shipping take?</h3><p>Delivery usually takes <strong>3–14 business days</strong>, depending on your location and the selected shipping method. Estimated delivery times are shown at checkout.</p><h3>How can I track my order?</h3><p>Once your order has been shipped, you’ll receive a tracking number via email or SMS. You can use it to track your package on the carrier’s website.</p>"
+            "title": "Does the belt slide down?",
+            "content": "<p>No, the skirt is designed with a secure high-waist waistband that stays in place during movement. It provides a comfortable fit without sliding down, even during active play.</p>"
           }
         },
-        "accor_item_Qfk43a": {
+        "accor_item_WCF9pR": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Returns & Exchanges",
-            "content": "<p><strong>How can I return or exchange an item?</strong><br/><br/>You may return or exchange items within the allowed return period (typically up to 14 days after delivery). Items must be <strong>unused and in original condition with tags attached</strong>. Please see our Returns & Exchanges page for full details.</p><p><strong>What if the item doesn’t fit me?</strong><br/><br/>You can request an <strong>exchange for a different size</strong> or return the item according to our return policy.</p>"
+            "title": "Is it suitable for active play?",
+            "content": "<p>Absolutely. The skirt is made from breathable, flexible fabric and includes built-in shorts, making it perfect for tennis, workouts, and other active sports while keeping you comfortable and confident.</p>"
           }
         },
-        "accor_item_mGhRQ8": {
+        "accor_item_cNCgLg": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "Sizing & Quality",
-            "content": "<h3>How do I choose the right size?</h3><p>Each product page includes a size chart to help you choose the best fit. If you’re unsure, feel free to contact our support team for assistance.</p><h3>Do the items look exactly like the photos?</h3><p>We strive to ensure that all product photos and descriptions are as accurate as possible. However, slight color differences may occur due to screen settings.</p>"
+            "title": "How to wash?",
+            "content": "<p>We recommend machine washing the skirt in cold water on a gentle cycle. Avoid bleach and tumble dry on low or air dry to maintain the fabric’s quality and shape.</p>"
           }
         },
-        "accor_item_BwmDKA": {
+        "accor_item_97jxMU": {
           "type": "accor_item",
           "settings": {
             "icon": "none",
-            "title": "General",
-            "content": "<h3>Do I need to create an account to place an order?</h3><p>No, you can check out as a guest. However, creating an account allows you to track orders, view purchase history, and manage returns more easily.</p><h3>Do you offer discounts or promotions?</h3><p>Yes! Subscribe to our newsletter and follow us on social media to receive updates on <strong>special offers, promotions, and discount codes</strong>.</p>"
+            "title": "How to choose the size?",
+            "content": "<p>You can choose your usual size for the best fit. The skirt is designed with a flexible, comfortable waistband. For more precise sizing, we recommend checking the Size Guide on the product page.</p>"
           }
         }
       },
       "block_order": [
-        "accor_item_nbGUYm",
-        "accor_item_eD3zTe",
-        "accor_item_BHy9BB",
-        "accor_item_Qfk43a",
-        "accor_item_mGhRQ8",
-        "accor_item_BwmDKA"
+        "accor_item_Ni4ani",
+        "accor_item_KYgTfd",
+        "accor_item_ACWN9D",
+        "accor_item_WCF9pR",
+        "accor_item_cNCgLg",
+        "accor_item_97jxMU"
       ],
       "name": "Accordion",
       "settings": {
