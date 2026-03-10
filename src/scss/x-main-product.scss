@@ -37,6 +37,10 @@
     }
   }
 
+  .t4s-carousel__nav-inner {
+    --aspect-ratioapt: 1 !important;
+  }
+
   .t4s-product__price-review {
     justify-content: flex-start;
   }
