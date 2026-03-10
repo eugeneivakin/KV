@@ -667,7 +667,7 @@
             "type": "base",
             "settings": {
               "title": "Shipping & Returns",
-              "url": "/",
+              "url": "shopify://pages/returns-exchanges",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -693,7 +693,7 @@
             "type": "base",
             "settings": {
               "title": "Reviews",
-              "url": "/",
+              "url": "#shopify-section-template--29279129928011__1767106266ec0bf55c",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -706,7 +706,7 @@
             "type": "base",
             "settings": {
               "title": "FAQ",
-              "url": "/",
+              "url": "#accordion",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
@@ -719,7 +719,7 @@
             "type": "base",
             "settings": {
               "title": "Payment and Delivery",
-              "url": "/",
+              "url": "shopify://pages/payment-and-delivery",
               "open_link": "_self",
               "icon": "",
               "cus_cl": false,
