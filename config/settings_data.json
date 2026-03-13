@@ -85,6 +85,7 @@
     "size_currency": "sm",
     "colors_css": true,
     "global_css": "",
+    "t4s_custom_js": true,
     "share_twitter": false,
     "share_pinterest": false,
     "share_tumblr": false,

@@ -1,14 +1,1 @@
-jQuery_T4NT(document).ready(function($) {
-
-     /**
-     *  Variant selection changed
-     *  data-variant-toggle="{{ variant.id }}"
-     */
-	   $( document ).on( "variant:changed", function( evt ) {
-	     // console.log( evt.currentVariant );
-	     // $('[data-variant-toggle]').hide(0);
-	     // $('[data-variant-toggle="'+evt.currentVariant.id+'"]').show(0);
-	   });
-});
-
-
+jQuery_T4NT(document).ready(function(t){t(document).on("variant:changed",async function(t){const e=document.querySelector(".t4s-section-main-product").querySelector(".t4s-main-product__about-model"),o=window.location.href;if(e)try{const t=await fetch(o,{method:"GET",headers:{"X-Requested-With":"XMLHttpRequest"}});if(!t.ok)return;const n=await t.text(),r=(new DOMParser).parseFromString(n,"text/html").querySelector(".t4s-main-product__about-model");r&&(e.innerHTML=r.innerHTML)}catch(t){console.error("Failed to update model block from variant URL:",t)}})});

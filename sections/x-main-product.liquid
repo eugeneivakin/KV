@@ -264,7 +264,9 @@
       >
         <div class="t4s-{{ class_media }} t4s-col-12 t4s-col-item t4s-product__media-wrapper">
           {% if product.metafields.custom.about_model != blank %}
-            <p class="t4s-main-product__about-model">{{ product.metafields.custom.about_model }}</p>
+            <p class="t4s-main-product__about-model">
+              {{ product.selected_or_first_available_variant.metafields.custom.model_information }}
+            </p>
           {% endif %}
 
           {%- case media_layout -%}
@@ -649,45 +651,45 @@
 
                 {%- when 'size_delivery_ask' -%}
                   {%- comment -%}
-                  <div class="t4s-extra-link" {{ block.shopify_attributes }}>
-                    {%- if bk_size_chart != '1' and pos_sizeg == '1' %}{{ html_sizeg }}{% endif -%}
+                    <div class="t4s-extra-link" {{ block.shopify_attributes }}>
+                      {%- if bk_size_chart != '1' and pos_sizeg == '1' %}{{ html_sizeg }}{% endif -%}
 
-                    {%- assign page_delivery = bk_stts.page_dr -%}
-                    {%- if bk_stts.delivery and page_delivery != blank -%}
-                      <a
-                        class="t4s-ch"
-                        data-no-instant
-                        rel="nofollow"
-                        href="{{ page_delivery.url }}"
-                        data-class="t4s-mfp-btn-close-inline"
-                        data-id="t4s-pr-popup__delivery"
-                        data-storageid="{{ page_delivery.url }}"
-                        data-open-mfp-ajax
-                        data-style="max-width:950px"
-                        data-mfp-src="{{ page_delivery.url }}/?section_id=ajax_popup"
-                      >
-                        {{- 'products.product.delivery_return' | t -}}
-                      </a>
-                    {%- endif -%}
+                      {%- assign page_delivery = bk_stts.page_dr -%}
+                      {%- if bk_stts.delivery and page_delivery != blank -%}
+                        <a
+                          class="t4s-ch"
+                          data-no-instant
+                          rel="nofollow"
+                          href="{{ page_delivery.url }}"
+                          data-class="t4s-mfp-btn-close-inline"
+                          data-id="t4s-pr-popup__delivery"
+                          data-storageid="{{ page_delivery.url }}"
+                          data-open-mfp-ajax
+                          data-style="max-width:950px"
+                          data-mfp-src="{{ page_delivery.url }}/?section_id=ajax_popup"
+                        >
+                          {{- 'products.product.delivery_return' | t -}}
+                        </a>
+                      {%- endif -%}
 
-                    {%- if bk_stts.ask -%}
-                      <a
-                        class="t4s-ch"
-                        data-no-instant
-                        rel="nofollow"
-                        href="{{ product.url }}"
-                        data-class="t4s-mfp-btn-close-inline"
-                        data-id="t4s-pr-popup__contact"
-                        data-storageid="contact_product{{ product.id }}"
-                        data-open-mfp-ajax
-                        data-style="max-width:570px"
-                        data-mfp-src="{{ product.url }}/?section_id=ajax_popup"
-                        data-phone="{{ bk_stts.phone }}"
-                      >
-                        {{- 'products.product.ask_question' | t -}}
-                      </a>
-                    {%- endif -%}
-                  </div>
+                      {%- if bk_stts.ask -%}
+                        <a
+                          class="t4s-ch"
+                          data-no-instant
+                          rel="nofollow"
+                          href="{{ product.url }}"
+                          data-class="t4s-mfp-btn-close-inline"
+                          data-id="t4s-pr-popup__contact"
+                          data-storageid="contact_product{{ product.id }}"
+                          data-open-mfp-ajax
+                          data-style="max-width:570px"
+                          data-mfp-src="{{ product.url }}/?section_id=ajax_popup"
+                          data-phone="{{ bk_stts.phone }}"
+                        >
+                          {{- 'products.product.ask_question' | t -}}
+                        </a>
+                      {%- endif -%}
+                    </div>
                   {%- endcomment -%}
 
                 {%- when 'meta' -%}
