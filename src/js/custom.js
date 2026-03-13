@@ -33,4 +33,27 @@ jQuery_T4NT(document).ready(function ($) {
       console.error("Failed to update model block from variant URL:", error);
     }
   });
+
+  $(document).on("click", "a[data-scroll-to]", function (evt) {
+    evt.preventDefault();
+
+    const targetSelector = this.getAttribute("data-scroll-to");
+    if (!targetSelector || targetSelector === "#") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    const targetElement = document.querySelector(targetSelector);
+    if (!targetElement) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    targetElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+
+	
 });

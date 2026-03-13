@@ -82,6 +82,17 @@
         </div>
       {%- endfor -%}
     </div>
+    {% if template.name == 'product' %}
+      <div class="t4s-text-center">
+        <a
+          href="#"
+          data-scroll-to
+          class="t4s-btn t4s-btn-base t4s-btn-style-default t4s-btn-size-medium t4s-btn-icon-false t4s-btn-color-dark t4s-btn-rounded- t4s-btn-effect-default"
+        >
+          {{ 'products.product.add_to_cart_alt' | t }}
+        </a>
+      </div>
+    {% endif %}
   </div>
   {{- html_layout[1] -}}
 </div>
